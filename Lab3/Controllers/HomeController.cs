@@ -22,7 +22,11 @@ namespace Lab3.Controllers
         // Partial View: hi?n th? menu danh m?c
         public IActionResult CategoryMenu()
         {
+<<<<<<< HEAD
             var categories = new List<string> { "Áo dài", "Áo đông", "Túi xách", "Đ?ng h?", "Ví da", "Thát lưng da", "T? l?nh", "Tivi", "Qu?t đi?n", "L? sư?i" };
+=======
+            var categories = new List<string> { "Áo dài", "Áo ðông", "Túi xách", "Ð?ng h?", "Ví da", "Thát lýng da", "T? l?nh", "Tivi", "Qu?t ði?n", "L? sý?i" };
+>>>>>>> bba7ad8456ea15568240045cc91fb942e8db8d9e
             return PartialView("_CategoryMenu", categories);
         }
     }
