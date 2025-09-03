@@ -1,4 +1,4 @@
-using System.Diagnostics;
+Ôªøusing System.Diagnostics;
 using Lab3.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +8,9 @@ namespace Lab3.Controllers
     {
         private static List<Product> products = new List<Product>
         {
-            new Product{Id=1, Name="N?i cım i?n cao t?n Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000},
-            new Product{Id=2, Name="N?i cım i?n cao t?n Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000},
-            new Product{Id=3, Name="N?i cım i?n cao t?n Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000}
+            new Product{Id=1, Name="N·ªìi c∆°m ƒëi·ªán cao t·∫ßn Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000},
+            new Product{Id=2, Name="N·ªìi c∆°m ƒëi·ªán cao t·∫ßn Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000},
+            new Product{Id=3, Name="N·ªìi c∆°m ƒëi·ªán cao t·∫ßn Nagakawa NAG0102", Image="/images/Noicom.jpg", Price=8500000}
         };
 
         // Hi?n th? t?t c? s?n ph?m
@@ -22,7 +22,7 @@ namespace Lab3.Controllers
         // Partial View: hi?n th? menu danh m?c
         public IActionResult CategoryMenu()
         {
-            var categories = new List<string> { "¡o d‡i", "¡o Ùng", "T˙i x·ch", "–?ng h?", "VÌ da", "Th·t l˝ng da", "T? l?nh", "Tivi", "Qu?t i?n", "L? s˝?i" };
+            var categories = new List<string> { "√Åo d√†i", "√Åo ƒë√¥ng", "T√∫i x√°ch", "ƒê?ng h?", "V√≠ da", "Th√°t l∆∞ng da", "T? l?nh", "Tivi", "Qu?t ƒëi?n", "L? s∆∞?i" };
             return PartialView("_CategoryMenu", categories);
         }
     }
