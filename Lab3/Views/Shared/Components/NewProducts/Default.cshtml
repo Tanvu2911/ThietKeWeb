@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Lab3.Models.Product>
+
+<div class="product-box">
+    <h3>Danh sách sản phẩm</h3>
+
+    <div class="row">
+        @foreach (var p in Model)
+        {
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="product-card">
+                    <img src="~/images/NoiCom.png" alt="@p.Name" />
+                    <p>@p.Name</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

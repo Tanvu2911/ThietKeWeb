@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Lab3.Models.Product>
+
+<div class="container mt-3">
+    <div class="row">
+        <!-- Bên trái: Danh mục -->
+        <div class="col-md-3">
+            <div class="category-box mb-3">
+                <h3>Danh mục sản phẩm</h3>
+                @await Html.PartialAsync("_CategoryMenu", new List<string> {
+                "Áo dài", "Áo đông", "Túi xách", "Đồng hồ",
+                                "Ví da", "Thắt lưng da", "Tủ lạnh", "Tivi", "Quạt điện", "Lò sưởi"
+                                })
+            </div>
+
+            <!-- Banner quảng cáo -->
+            <div class="ad-banner">
+                <img src="~/images/ads.png" alt="Quảng cáo" />
+            </div>
+        </div>
+
+        <!-- Bên phải: Sản phẩm -->
+        <div class="col-md-9">
+            <!-- Sản phẩm mới -->
+            <div class="product-box mb-4">
+                <h3>Sản phẩm mới</h3>
+                <div class="row">
+                    @foreach (var p in Model)
+                    {
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="product-card">
+
+                                <img src="~/images/NoiCom.png" alt="@p.Name" />
+                                <p>@p.Name</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Danh sách sản phẩm từ ViewComponent -->
+            @await Component.InvokeAsync("NewProducts")
+        </div>
+    </div>
+</div>
